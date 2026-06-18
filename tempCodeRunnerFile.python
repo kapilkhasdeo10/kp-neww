@@ -1,0 +1,35 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats
+
+# Employee salaries (in thousands Rs.)
+salaries = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140]
+
+# Central Tendency Measures - Where is the 'centre' of the data?
+mean_salary = np.mean(salaries)
+median_salary = np.median(salaries)
+mode_salary = stats.mode(salaries,keepdims=True).mode[0]
+
+print(f"Mean (Average):                   Rs.{mean_salary: .1f}K")
+print(f"Median: (Middle Value)            Rs.{median_salary: .1f}K")
+print(f"Mode:  (Most Common Value)        Rs.{mode_salary: .1f}K")
+
+
+# Spread - how varied is the data?
+std = np.std(salaries)
+var = np.var(salaries)
+rng = max(salaries) - min(salaries)
+q1 = np.percentile(salaries, 25) 
+q3 = np.percentile(salaries, 75)
+iqr = q3 - q1
+
+print(f'Std Deviation: {std:.2f}K (most important spread measure)')
+print(f'IQR {iqr}K (Q1={q1}, Q3={q3}')
+
+
+# Outliers detection using IQR
+lower = q1 - 1.5 * iqr
+upper = q3 + 1.5 * iqr
+outliers = [x for x in salaries if x < lower or x > upper]
+print(f'Outliers: {outliers}')

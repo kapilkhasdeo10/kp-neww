@@ -35,3 +35,59 @@
 # print(f'Outliers: {outliers}')
 
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+from scipy import stats
+
+# data = {
+#     'name': np.random.choice(['Gangadhar','Bhupinder','Katappa','Mogembo','Gabbar','Shakha','Sambha','Thanos','Modi','Hidimba',
+#                 'Putna','Surpankha','None'],25),
+
+#     'age': np.random.randint(18,24,25).astype(float),
+    
+#     'city': np.random.choice(['Nusantara','Melbourne','Seoul','Manila','Bangkok','Hanoi','Beijing','Sydney','Canberra','None'],25),
+
+#     'math_marks': np.random.randint(30,100,25).astype(float),
+#     'chemistry_marks': np.random.randint(30,100,25).astype(float),
+#     'hindi_marks': np.random.randint(30,100,25).astype(float),
+#     'english_marks': np.random.randint(30,100,25).astype(float),
+#     'physics_marks': np.random.randint(30,100,25).astype(float)
+# }
+
+# df = pd.DataFrame(data)
+
+# df.loc[np.random.choice(df.index,5), 'name'] = np.nan
+# df.loc[np.random.choice(df.index,3), 'age'] = np.nan
+# df.loc[np.random.choice(df.index, 2), 'city'] = np.nan
+# df.loc[np.random.choice(df.index, 4), 'math_marks'] = np.nan
+# df.loc[np.random.choice(df.index, 2), 'chemistry_marks'] = np.nan
+# df.loc[np.random.choice(df.index, 3), 'english_marks'] = np.nan
+
+# df.to_csv('students_25.csv', index=False)
+# df2 = pd.read_csv('students_25.csv')
+
+# print('Missing Values\n')
+# print(df2.isnull().sum())
+
+# np.random.seed(42)
+# study = np.random.uniform(1, 10, 100)
+# marks = study * 8 + np.random.normal(0, 5, 100) 
+# marks = np.clip(marks, 30, 100)
+# absent = 10 - study + np.random.normal(0, 1, 100)
+# df = pd.DataFrame({'study_hrs': study, 'marks': marks, 'absences': absent})
+
+# corr_matrix = df.corr()
+# print(corr_matrix.round(3))
+
+# plt.figure(figsize=(8, 6))
+# sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, fmt='.2f')
+# plt.title('Correlation Heatmap')
+# plt.show()
+
+# # Pearson correlation
+# r, p_value = stats.pearsonr(study, marks)
+# print(f"Study-Marks Correlation: r = {r:.3f}, p-value = {p_value:.4f}")
+# print(f"Interpretation: {'Strong positive' if r >= 0.8 else 'Moderate' if r >= 0.5 else 'Weak'}")
+

@@ -32,12 +32,3 @@
 # sns.pairplot(df[['marks', 'study_hrs']], diag_kind='kde')
 # plt.show()
 
-# import csv
-# records = [
-#     ['Name', 'Age', 'City', 'Marks', 'sub_marks1', 'sub_marks2', 'sub_marks3', 'sub_marks4', 'sub_marks5'],
-#     ['kapil', 22, 'Indore', 88, 85, 90, 87, 89, 86],
-#     ['lava', 21, 'Indore', 98, 95, 92, 94, 96, 93],
-#     ['yash', 23, 'Indore', 81, 78, 80, 79, 82, 80],
-#     ['snaha', 22, 'Indore', 89, 86, 88, 87, 90, 89],
-#     ['mahesh', 22, 'Indore', 87, 84, 86, 85, 88, 87]
-# ]
