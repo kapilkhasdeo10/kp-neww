@@ -31,20 +31,27 @@
 # random = np.random.randint(40,100,(4,3))
 # print(random)
 
-# import numpy as np
+import numpy as np
 
-# marks = np.array([[54,68,96], [87,42,36],[75,55,99]])
-# print(marks)
+marks = np.array([[54,68,96], [87,42,36],[75,55,99]])
+print(marks)
 
-# print(np.mean(marks))               # Overall mean
-# print(np.mean(marks, axis=1))       # Mean per student (row)
-# print(np.mean(marks, axis=0))       # Mean per student (column)
-# print(np.max(marks))                # Highest marks
-# print(np.std(marks))                # Standard Deviation
+print(np.mean(marks))               # Overall mean
+print(np.mean(marks, axis=1))       # Mean per student (row)
+print(np.mean(marks, axis=0))       # Mean per student (column)
+print(np.max(marks))                # Highest marks
+print(np.std(marks))                # Standard Deviation
+print(np.median(marks))             # Median marks
+print(np.percentile(marks, 25))     # 25th percentile
+print(np.percentile(marks, 50))     # 50th percentile
+print(np.percentile(marks, 75))     # 75th percentile
+print(np.percentile(marks, 90))     # 90th percentile
+print(np.sort(marks))               # Sort marks
+print(np.sort(marks, axis=1))       # Sort marks per student (row)  
 
-# import numpy as np
+import numpy as np
 
-# arr = np.array([10,20,30,40])
-# print(arr *2)
-# print(arr + 5)
-# print(arr **2)
+arr = np.array([10,20,30,40])
+print(arr *2)
+print(arr + 5)
+print(arr **2)

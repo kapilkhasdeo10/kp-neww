@@ -1,4 +1,5 @@
-# Box Plot - outliers and spread per group
-# sns.boxplot(data=df, x='city', y='marks', palette='Set1')
-# plt.title('Marks Distribution by City')
-# plt.show()
+list = [10,20,30,40,50,60,70,80,90,100]
+total =0
+for sum in list:
+    total += sum
+print(total)

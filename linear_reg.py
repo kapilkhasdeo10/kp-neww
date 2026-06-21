@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 study = [1,2,3,4,5,6,7,8,9,10,2.5,4.5,6.5,8.5]
 marks = [25,38,52,65,71,78,85,89,93,96,43,68,82,91]
 
-X =np.array(study).reshape(-1,1)    #   Must for 2D for sklearn
+X = np.array(study).reshape(-1,1)      #   Must for 2D for sklearn
 Y = np.array(marks)
 
 X_train,X_test, Y_train,Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
@@ -35,4 +35,6 @@ plt.ylabel("Exam Marks")
 plt.title("Linear Regression - Study Hours vs Marks")
 plt.legend()
 plt.grid(True,alpha=0.3)
+plt.xlim(0,11)
+plt.ylim(0,110)
 plt.show()
