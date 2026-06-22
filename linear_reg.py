@@ -28,7 +28,7 @@ print(f'Student studying 7 hrs predicted marks: {new_pred:.1f}')
 
 #   Plot
 plt.figure(figsize=(9,5))
-plt.scatter(X,Y,color='steelblue',s=150,alpha=0.8,label='Actual')
+plt.scatter(X,Y,color='steelblue',s=100,alpha=0.8,label='Actual')
 plt.plot(X,model.predict(X),color='red',linewidth=2,label='Predicted line')
 plt.xlabel("Study Hours/Day")
 plt.ylabel("Exam Marks")
