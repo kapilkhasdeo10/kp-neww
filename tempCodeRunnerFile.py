@@ -1,1 +1,1 @@
-from sklearn.datasets import load_iris
+print(f'classification report: {classification_report(Y_test, xgb.predict(X_test), target_names=data.target_names)}')

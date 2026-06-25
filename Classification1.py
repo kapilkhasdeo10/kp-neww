@@ -16,10 +16,10 @@ print(f'Decision Tree Accuracy: {accuracy_score(y_test, dt.predict(X_test))*100:
 print(export_text(dt, feature_names=iris.feature_names))
 
 # Visualize Decision Tree
-plt.figure(figsize=(14,6))
-plot_tree(dt, feature_names=iris.feature_names, class_names=iris.target_names, filled=True,rounded=True,fontsize=9)
-plt.title('Decision Tree, Iris classification')
-plt.show()
+# plt.figure(figsize=(14,6))
+# plot_tree(dt, feature_names=iris.feature_names, class_names=iris.target_names, filled=True,rounded=True,fontsize=9)
+# plt.title('Decision Tree, Iris classification')
+# plt.show()
 
 # Random Forest, multiple trees
 rf = RandomForestClassifier(n_estimators=100, random_state=42)
@@ -33,3 +33,4 @@ imp.plot(kind='bar', color='steelblue')
 plt.title('Feature Importance')
 plt.tight_layout()
 plt.show()
+
