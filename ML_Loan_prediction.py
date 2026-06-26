@@ -219,3 +219,24 @@ result["Approval Probability"] = probability[:,1]
 
 print("\nPrediction for New Applicants")
 print(result)
+
+
+print("""
+This project implements an end-to-end machine learning pipeline for loan prediction.
+The dataset was explored, cleaned by handling missing values, and categorical
+variables were encoded using LabelEncoder. Five visualizations were created,
+including loan status distribution, applicant income distribution, loan amount
+by education, gender vs loan status, and a correlation heatmap.
+
+Three machine learning models—Logistic Regression, Random Forest, and XGBoost—
+were trained and evaluated using accuracy, precision, recall, F1-score, and
+confusion matrices. Random Forest was also used to determine feature importance,
+highlighting the most influential variables in loan approval decisions.
+
+Finally, predictions were generated for five new applicants along with approval
+and default probabilities. In most cases, XGBoost provides the highest prediction
+accuracy because it effectively captures complex relationships and minimizes
+overfitting through boosting. Random Forest offers a good balance between
+performance and interpretability, while Logistic Regression serves as a simple
+baseline model.
+""")
