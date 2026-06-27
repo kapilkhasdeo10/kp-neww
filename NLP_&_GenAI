@@ -1,0 +1,40 @@
+# Lower case
+# Tokenization
+# stopword removal 
+# lammatisation - reduce words
+# TF-IDF - converting words to numbers  (TF ^ IDF)
+
+
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('punkt_tab')
+
+test = 'Students are learning Python for AI and Machine Learning in Bhopal!'
+
+# Step 1: Tokenize - split into words
+tokens = word_tokenize(test.lower())
+print("Tokens:", tokens)
+
+# Step 2: Remove stopwords
+stop = set(stopwords.words('english'))
+filtered_tokens = [w for w in tokens if w not in stop and w.isalpha()]
+print("Filtered Tokens:", filtered_tokens)
+
+# Step 3: Lemmatization
+lemma = WordNetLemmatizer()
+final = [lemma.lemmatize(w) for w in filtered_tokens]
+print("After Lemmatization:", final)
+
+# TF-IDF - converting words to numbers for ML
+from sklearn.feature_extraction.text import TfidfVectorizer
+docs = ['Python is great for data science', 'Machine learning is amazing', 'AI is the future of technology']
+tfidf = TfidfVectorizer()
+matrix = tfidf.fit_transform(docs)
+print("TF-IDF shape:", matrix.shape)
+print("feature names:", tfidf.get_feature_names_out())

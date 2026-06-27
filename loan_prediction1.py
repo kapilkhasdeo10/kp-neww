@@ -98,6 +98,8 @@ plt.show()
 
 # 5. Split Dataset
 
+df = df.drop("Loan_ID", axis=1)
+
 X = df.drop("Loan_Status", axis=1)
 y = df["Loan_Status"]
 
