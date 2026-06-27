@@ -16,3 +16,4 @@ xgb = XGBClassifier(n_estimators=100, max_depth=4, learning_rate=0.1, random_sta
 xgb.fit(X_train, Y_train)
 print(f'XGBoost Accuracy: {accuracy_score(Y_test, xgb.predict(X_test))*100:.2f}%')
 # print(f'classification report: {classification_report(Y_test, xgb.predict(X_test), target_names=data.target_names)}')
+
